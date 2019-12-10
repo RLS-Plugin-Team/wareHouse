@@ -417,7 +417,7 @@ class Main extends PluginBase implements Listener{
 	
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args):bool{       
 	if($sender->getName() === "CONSOLE") {
-	$sender->sendMessage(">>§cこのコマンドはゲーム内で使ってください");
+	$sender->sendMessage("[Whouse] §cこのコマンドはゲーム内で使ってください");
 	return false;
         }else{
 	switch ($command->getName()) {
@@ -428,8 +428,8 @@ class Main extends PluginBase implements Listener{
 		$check = true;
 		foreach($player->getInventory()->getContents() as $item){
 		    if($item->hasEnchantments()){
-		        $player->sendMessage("§c>>インベントリにエンチャントされたアイテムがあります");
-                        $player->sendMessage("§c>>エンチャントされたアイテムをインベントリから抜いてください");
+		        $player->sendMessage("[Whouse] §cインベントリにエンチャントされたアイテムがあります");
+                        $player->sendMessage("[Whouse] §cエンチャントされたアイテムをインベントリから抜いてください");
                         $check = false;
                         break;
 		    }
